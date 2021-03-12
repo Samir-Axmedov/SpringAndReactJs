@@ -9,7 +9,7 @@ export function withApiProgress(WrappedComponent, apiPath) {
         }
         componentDidMount() {
             this.requestInterceptors = axios.interceptors.request.use(request => {
-                this.updateApiCallFor(request.config.url, true);
+                this.updateApiCallFor(request.url, true);
                 return request;
             });
             this.responseInterceptors = axios.interceptors.response.use(respons => {
