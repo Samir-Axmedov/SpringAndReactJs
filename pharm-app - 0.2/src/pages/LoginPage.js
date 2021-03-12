@@ -59,7 +59,9 @@ class LoginPage extends Component {
             }
             onLoginSuccess(authState);
         } catch (apiError) {
-         
+                this.setState({
+                error: apiError.response.data.message
+            });
         }
     }
 
