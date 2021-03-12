@@ -32,7 +32,7 @@ public class userController {
     //@CrossOrigin
     @PostMapping("/api/1.0/users")
     //@ResponseStatus(HttpStatus.CREATED)
-    private genericResponce createUser(@RequestBody User user) {
+    private genericResponce createUser(@Validated @RequestBody User user) {
 /*        String username = user.getUsername();
         String displayName = user.getDisplayName();
         apiError error = new apiError(400, "Validation error", "/api/1.0/users");
